@@ -1,24 +1,18 @@
-# Threat Intelligence Platform
+# Threat Intelligence Platform (TIP)
 
 ## Overview
-A platform that aggregates multiple threat feeds and correlates indicators of compromise (IOCs) to provide actionable alerts.
+A lightweight Threat Intelligence Platform that:
+- Ingests open-source threat feeds or local feed files (IP addresses, domains, hashes).
+- Normalizes and stores Indicators of Compromise (IoCs) in SQLite.
+- Correlates IoCs with local log indicators and other IoCs.
+- Optionally enriches IoCs using third-party APIs (VirusTotal).
+- Provides a Streamlit dashboard for inspection and basic alerting.
 
-## Features
-- Ingest IOCs from sources such as AlienVault OTX and AbuseIPDB
-- Normalize and deduplicate threat data
-- Correlate IPs, hashes, and domains with local logs
-- Dashboard for visualizing current active threats
+This project is intended for learning and demonstration. For production use, harden the storage, secure API keys, and respect feed licensing.
 
-## Tech Stack
-- Python, Flask/FastAPI
-- SQLite or PostgreSQL
-- Pandas
-- Streamlit
-
-## Future Work
-- Integration with SIEM tools (Splunk, ELK)
-- Enrichment with VirusTotal API
-- Automated alerts (email/Slack)
-
-## Status
-In progress – feed ingestion prototype implemented
+## Quickstart (local)
+1. Create venv and install:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate    # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
