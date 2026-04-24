@@ -1,0 +1,5 @@
+type,value,notes
+ip,45.33.32.156,known brute force source
+ip,185.220.101.45,tor exit node
+domain,tesla-update.com,phishing domain
+hash,44d88612fea8a8f36de82e1278abb02f,known malware sample
